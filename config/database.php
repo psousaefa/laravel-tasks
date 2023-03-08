@@ -50,7 +50,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'msdocs-laravel-mysql-efa-server'),
+            'host' => env('DB_HOST', 'msdocs-laravel-mysql-efa-server.mysql.database.azure.com'),
             'port' => env('DB_PORT', '3306'),
             'database'  => env('DB_DATABASE', 'msdocs-laravel-mysql-efa-database'),
             'username'  => env('DB_USERNAME', 'tiyxwiedro'),
