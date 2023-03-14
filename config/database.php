@@ -47,15 +47,31 @@ return [
         //'database'  => env('DB_DATABASE', 'forge'),
         //'username'  => env('DB_USERNAME', 'forge'),
         //'password'  => env('DB_PASSWORD', ''),
+        //'unix_socket' => env('DB_SOCKET', ''),
+       /* 'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'prefix_indexes' => true,
+        'strict' => true,
+        'engine' => null,
+        'options' => extension_loaded('pdo_mysql') ? array_filter([
+            PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+        */
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'msdocs-laravel-mysql-efa-server.mysql.database.azure.com'),
+            'url' => 'DATABASE_URL',
+            'host' => 'DB_HOST',
+            'port' => 'DB_PORT',
+            'database'  => 'DB_DATABASE',
+            'username'  => 'DB_USERNAME',
+            'password'  => 'DB_PASSWORD',            
+          /*  'host' => env('DB_HOST', 'msdocs-laravel-mysql-efa-server.mysql.database.azure.com'),
             'port' => env('DB_PORT', '3306'),
             'database'  => env('DB_DATABASE', 'msdocs-laravel-mysql-efa-database'),
             'username'  => env('DB_USERNAME', 'tiyxwiedro'),
             'password'  => env('DB_PASSWORD', 'D1J3XN74Y288E7GH$'),
-            'unix_socket' => env('DB_SOCKET', ''),
+           */
+            'unix_socket' => 'DB_SOCKET',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -63,7 +79,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                PDO::MYSQL_ATTR_SSL_CA => 'MYSQL_ATTR_SSL_CA',
             ]) : [],
         ],
 
