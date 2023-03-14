@@ -59,7 +59,7 @@ return [
         */
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'DATABASE_URL',
+            //'url' => 'DATABASE_URL',
             'host' => 'DB_HOST',
             'port' => 'DB_PORT',
             'database'  => 'DB_DATABASE',
